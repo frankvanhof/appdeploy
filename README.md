@@ -38,5 +38,6 @@ At this point, we have CD of that same image mentioned in the values.yaml file i
 So the next step is to configure the CI pipeline in the source code git repo so that a commit resuts in a build and a new image and an updated chart.yaml so ArgoCD would synch the namespace with the new image. Additional pipelines would take care of commits in folders in a manifest repo like this one that are watched by GitOps instances in differente environments, like test, staging and production.
 
 ToDo: 
-- Steps to deploy a GitLab Server on CRC and add GitLab CI to the karaf-log repo so we can add CI to trigger a complete CI + GitOps CD cycle. Useful tips [here](https://levelup.gitconnected.com/gitops-in-kubernetes-with-gitlab-ci-and-argocd-9e20b5d3b55b)
+- Deploy a GitLab Server on CRC and add GitLab CI to the karaf-log repo so we can add CI to trigger a complete CI + GitOps CD cycle. Useful tips [here](https://levelup.gitconnected.com/gitops-in-kubernetes-with-gitlab-ci-and-argocd-9e20b5d3b55b)
 - Now the ArgoCD app is created by hand in the UI. That is great for demonstration purposes, but we want to create Argo apps straight from Git, of course.
+- Add karaf-amq source code repo + add deployment yamls for that source to this manifest repo + add automatic deployment of an amq broker to that deployment somehow.
