@@ -6,6 +6,7 @@ _Testing for GitOps, a guide to deploying a Fuse on Karaf image with ArgoCD and 
 
 - This was developed and tested on Windows. The CRC VM was given some more resources by running
 ```console
+# Docs say this only works on new VMs
 crc delete
 crc start
 # Increase defaults of 4 and 8192 to whatever you feel comfortable with
