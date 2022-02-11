@@ -40,4 +40,5 @@ So the next step is to configure the CI pipeline in the source code git repo so 
 ToDo: 
 - Deploy a GitLab Server on CRC and add GitLab CI to the karaf-log repo so we can add CI to trigger a complete CI + GitOps CD cycle. Useful tips [here](https://levelup.gitconnected.com/gitops-in-kubernetes-with-gitlab-ci-and-argocd-9e20b5d3b55b)
 - Now the ArgoCD app is created by hand in the UI. That is great for demonstration purposes, but we want to create Argo apps straight from Git, of course.
+- Study the [App of Apps](https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping/) pattern, this pattern is ideal for grouping a set of related applications, such as dozens of integration containers.
 - Add karaf-amq source code repo + add deployment yamls for that source to this manifest repo + add automatic deployment of an amq broker to that deployment somehow.
