@@ -31,5 +31,5 @@ Some prerequisites if you want to make this run as-is.
 Then when you install Openshift GitOps by following [these](https://docs.openshift.com/container-platform/4.9/cicd/gitops/installing-openshift-gitops.html) instructions, you should then be able to create an ArgoCD app and configure it to use this Git Repo to synch with a namespace of your choosing. Follow the installation instructions and test by creating the spring-boot application in the instructions. This does nothing more than watching a repo and pulling and deploying an image, but it demonstrates that privileges are set correctly and ArgoCD functions correctly. Besides, it has a nice UI to stare at.
 
 ToDo: 
-- Steps to deploy a GitLab Server on CRC and add GitLab CI to the karaf-log repo so we can add CI to trigger a complete CI + GitOps cycle.
+- Steps to deploy a GitLab Server on CRC and add GitLab CI to the karaf-log repo so we can add CI to trigger a complete CI + GitOps CD cycle.
 - Now the ArgoCD app is created by hand in the UI. That is great for demonstration purposes, but we want to create Argo apps straight from Git, of course.
