@@ -29,7 +29,7 @@ Or just go all the way and use a WSL Linux bash, or even [add Fedora to WSL](htt
 Some prerequisites if you want to make this run as-is. 
 - Download and install your latest [CRC](https://console.redhat.com/openshift/create/local).
 - Open the web console, click on the ? symbol in the menu bar, choose command line tools and download at least the oc CLI and add the path to the binary in your %PATH% environment variable.
-- Download maven if necessary, and configure redhat repos. Use this [settings.xml](https://github.com/frankvanhof/fuse710-karaf-camel-log/blob/9c28dd157a1ee80a3af59437a22c9d71602841f1/configuration/settings.xml). This is necesarry in the step where you clone and build the repo with the source code.
+- [Download maven](https://maven.apache.org/download.cgi) if necessary, and configure redhat repos. Use this [settings.xml](https://github.com/frankvanhof/fuse710-karaf-camel-log/blob/9c28dd157a1ee80a3af59437a22c9d71602841f1/configuration/settings.xml). This is necesarry in the step where you clone and build the repo with the source code.
 
 [Here](https://github.com/frankvanhof/fuse710-karaf-camel-log) you can clone or fork a repo that contains source code and Maven configuration to build a Fuse bundle, wrap it in a Karaf container, and then wrap that in a container image that is pushed to an Openshift registry. Follow that repo's readme and make sure you work with a karaf-log namespace when you execute the `mvn clean -DskipTests oc:deploy -Popenshift -Djkube.generator.from=karaf-log/fuse-karaf-openshift:1.10` command. Now the image is available in the image registry of the Openshift cluster.
 
