@@ -4,6 +4,7 @@ _Testing for GitOps, a guide to deploying a Fuse on Karaf image with ArgoCD and 
 
 ![Image](https://miro.medium.com/max/700/1*9q37KuHZFWC7XOZRSQpJ6Q.png)
 
+## Dev environment
 - This was developed and tested on Windows. The CRC VM was given some more resources by running
 ```console
 # Docs say this only works on new VMs
@@ -21,7 +22,10 @@ CodeReady Containers version: 1.39.0+ba8a8acc
 OpenShift version: 4.9.15 (bundle installed at D:\devtools\crc\crc_hyperv_4.9.15.crcbundle)
 ```
 It helps to have [Git Bash](https://git-scm.com/download/win) installed on your windows system so you can copy paste and run linux bash commands from Red Hat's documentation. Windows Powershell will even automatically open Git Bash when you try to execute a bash shell script.
+Or just go all the way and use a WSL Linux bash, or even [add Fedora to WSL](https://dev.to/bowmanjd/install-fedora-on-windows-subsystem-for-linux-wsl-4b26).
 
+
+## Steps
 Some prerequisites if you want to make this run as-is. 
 - Download and install your latest [CRC](https://console.redhat.com/openshift/create/local).
 - Open the web console, click on the ? symbol in the menu bar, choose command line tools and download at least the oc CLI and add the path to the binary in your %PATH% environment variable.
@@ -37,7 +41,7 @@ At this point, we have CD of that same image mentioned in the values.yaml file i
 
 So the next step is to configure the CI pipeline in the source code git repo so that a commit resuts in a build and a new image and an updated chart.yaml so ArgoCD would synch the namespace with the new image. Additional pipelines would take care of commits in folders in a manifest repo like this one that are watched by GitOps instances in differente environments, like test, staging and production.
 
-ToDo: 
+## TODO
 - Deploy a GitLab Server on CRC and add GitLab CI to the karaf-log repo so we can add CI to trigger a complete CI + GitOps CD cycle. Useful tips for pipelines [here](https://levelup.gitconnected.com/gitops-in-kubernetes-with-gitlab-ci-and-argocd-9e20b5d3b55b). Docs on deploying GitLab on minkube [here](https://docs.gitlab.com/charts/development/minikube/). 
 - Now the ArgoCD app is created by hand in the UI. That is great for demonstration purposes, but we want to create Argo apps straight from Git, of course.
 - Study the [App of Apps](https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping/) pattern, this pattern is ideal for grouping a set of related applications, such as dozens of Camel Fuse integration containers.
