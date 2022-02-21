@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  AMQ_CAMEL_PARAMETERS: ""
+  AMQ_CAMEL_PASSWORD: admin
+  AMQ_CAMEL_SERVICE_NAME: fuse710-karaf-amq
+  AMQ_CAMEL_SERVICE_PORT_AMQPS: "8181"
+  AMQ_CAMEL_USERNAME: admin
+kind: ConfigMap
+metadata:
+  name: config-karaf-amq
+  namespace: karaf-amq
+
