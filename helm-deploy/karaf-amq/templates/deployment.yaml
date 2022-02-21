@@ -38,7 +38,7 @@ spec:
               protocol: TCP
           envFrom:
             - configMapRef:
-              name: config-karaf-amq            
+                name: config-karaf-amq            
           resources:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.nodeSelector }}
