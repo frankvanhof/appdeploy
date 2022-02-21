@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ template "karaf-amq.fullname" . }}
-  namespace: helm-deploy
   labels:
     app: {{ template "karaf-amq.name" . }}
     chart: {{ template "karaf-amq.chart" . }}
