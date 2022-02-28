@@ -1,12 +1,13 @@
 # Default values for karaf-log.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+# To tag an image: oc tag image-registry.openshift-image-registry.svc:5000/karaf-log/fuse710-karaf-camel-log fuse710-karaf-camel-log:1.0.0
 
 replicaCount: 1
 
 image:
   repository: image-registry.openshift-image-registry.svc:5000/karaf-log/fuse710-karaf-camel-log
-  tag: 1.0.0
+  tag: latest
   pullPolicy: Always
 
 service:
