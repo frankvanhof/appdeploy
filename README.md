@@ -2,7 +2,7 @@
 
 _Testing for GitOps, a guide to deploying a Fuse on Karaf image with ArgoCD and Helm to a CRC cluster._
 
-![Image](https://miro.medium.com/max/700/1*9q37KuHZFWC7XOZRSQpJ6Q.png)
+![Image](https://miro.medium.com/max/2400/1*9q37KuHZFWC7XOZRSQpJ6Q.png)
 
 ## Dev environment
 - This was developed and tested on Windows. The CRC VM was given some more resources by running
